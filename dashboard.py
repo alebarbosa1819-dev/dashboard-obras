@@ -78,8 +78,9 @@ _eixo = dict(
 
 pio.templates["celesc_escuro"] = go.layout.Template(
     layout=dict(
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
+        # fundos opacos: o gráfico fica escuro mesmo se o Streamlit (ex.: na nuvem) abrir no tema claro
+        paper_bgcolor=COR_CARTAO,
+        plot_bgcolor="#101e36",
         font=dict(family=FONTE, size=13, color=COR_TEXTO),
         colorway=PALETA,
         separators=",.",  # 1.234,56 no padrão brasileiro
